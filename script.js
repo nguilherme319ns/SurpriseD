@@ -1,9 +1,9 @@
 const cantadas = [
-    "Duda, meu amor por você é tão brilhante quanto as estrelas na 'Noite Estrelada' de Van Gogh. ✨",
+    "Bea, meu amor por você é tão brilhante quanto as estrelas na 'Noite Estrelada' de Van Gogh. ✨",
     "Se eu fosse Van Gogh, eu pintaria o céu só para ver você sorrir. 🌌",
-    "Duda, até o próprio Van Gogh ficaria com inveja das cores que você traz para a minha vida. 🌈",
-    "Você é como uma obra-prima, Duda. Até o Van Gogh ficaria sem palavras ao te ver. 🎨",
-    "Se Van Gogh tivesse te conhecido ele apreciaria teus olhos ao inves das estrelas. ✨"
+    "Amor, até o próprio Van Gogh ficaria com inveja das cores que você traz para a minha vida. 🌈",
+    "Você é como uma obra-prima, Bea. Até o Van Gogh ficaria sem palavras ao te ver. 🎨",
+    "Se Van Gogh tivesse te conhecido ele teria pintado teus olhos ao inves das estrelas. ✨"
 ];
 
 function mostrarCantada() {
