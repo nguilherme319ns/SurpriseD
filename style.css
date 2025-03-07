@@ -6,66 +6,74 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: radial-gradient(circle at top left, #1f1f1f, #121212);
-    color: #eaeaea;
+    background: radial-gradient(circle at top left, #2a2a2a, #121212);
+    color: #f5f5f5;
     text-align: center;
+    overflow: hidden;
 }
 
 /* Estilo do Container */
 .container {
     padding: 40px;
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    animation: slideIn 0.8s ease;
+    max-width: 700px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    animation: slideIn 1s ease-out;
 }
 
 h1 {
-    font-size: 30px;
-    color: #e0e0e0;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 36px;
+    color: #e1e1e1;
+    margin-bottom: 25px;
+    font-weight: 900;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
 }
 
 #cantada {
-    font-size: 22px;
+    font-size: 24px;
     margin: 20px 0;
-    color: #d3d3d3;
-    min-height: 60px;
+    color: #dcdcdc;
+    min-height: 70px;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    line-height: 1.5;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.4s ease, transform 0.2s ease;
+    line-height: 1.6;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(0);
 }
 
+/* Transição de Opacidade */
 .fade-out {
     opacity: 0;
+    transform: translateY(10px);
 }
 
 /* Estilo do Botão */
 .button {
-    background-color: #3e7cfa;
+    background-color: #5573f1;
     border: none;
     color: #ffffff;
-    padding: 14px 28px;
+    padding: 16px 32px;
     font-size: 18px;
-    border-radius: 12px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s;
-    box-shadow: 0 8px 16px rgba(62, 124, 250, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, filter 0.2s ease-in-out;
+    box-shadow: 0 12px 24px rgba(85, 115, 241, 0.4);
+    outline: none;
 }
 
 .button:hover {
-    background-color: #2f6bdf;
-    box-shadow: 0 10px 20px rgba(47, 107, 223, 0.5);
+    background-color: #4c63d7;
+    box-shadow: 0 16px 32px rgba(76, 99, 215, 0.5);
+    filter: brightness(1.1);
 }
 
 .button:active {
@@ -73,18 +81,50 @@ h1 {
 }
 
 .button:disabled {
-    background-color: #627dbe;
+    background-color: #7a8cd6;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
 /* Animações */
 @keyframes slideIn {
-    from {
-        transform: translateY(-20px);
+    0% {
+        transform: translateY(-30px);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .button {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #cantada {
+        font-size: 20px;
+    }
+
+    .button {
+        padding: 12px 24px;
+        font-size: 14px;
     }
 }
